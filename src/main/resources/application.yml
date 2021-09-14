@@ -1,0 +1,26 @@
+spring:
+  data:
+    elasticsearch:
+      #集群名称
+      cluster-name: elasticsearch
+      #节点
+      cluster-nodes: 127.0.0.1:9300
+
+  elasticsearch:
+    jest:
+      uris: http://127.0.0.1:9200
+
+
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 10
+        prefetch: 1
+        auto-startup: true
+        acknowledge-mode: manual
